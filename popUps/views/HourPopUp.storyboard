@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Hour Pop Up View Controller-->
+        <scene sceneID="pXc-WB-400">
+            <objects>
+                <viewController storyboardIdentifier="hourSB" id="7Sp-Vl-MZw" customClass="HourPopUpViewController" customModule="Spa4U" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OaF-rW-iQj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0eG-YH-vjA">
+                                <rect key="frame" x="47" y="288" width="320" height="320"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="320" id="ZWt-ry-xln"/>
+                                    <constraint firstAttribute="width" constant="320" id="ttb-FZ-5Dc"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="Fgt-x7-r02" kind="embed" id="bh4-oj-SJE"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="0.50417380140000001" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="0eG-YH-vjA" firstAttribute="centerX" secondItem="OaF-rW-iQj" secondAttribute="centerX" id="mgx-AE-EjG"/>
+                            <constraint firstItem="0eG-YH-vjA" firstAttribute="centerY" secondItem="OaF-rW-iQj" secondAttribute="centerY" id="trq-Fg-B0z"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="IHd-G2-vRE"/>
+                    </view>
+                    <connections>
+                        <outlet property="container" destination="0eG-YH-vjA" id="82J-TD-Jeq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZAV-sq-x63" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="146" y="161"/>
+        </scene>
+        <!--Hours Table View Controller-->
+        <scene sceneID="nJJ-fA-9tX">
+            <objects>
+                <tableViewController id="Fgt-x7-r02" customClass="HoursTableViewController" customModule="Spa4U" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="dg6-X9-D8I">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="hourCell" rowHeight="80" id="bU0-vw-bnp" customClass="HourCell" customModule="Spa4U" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="320" height="80"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bU0-vw-bnp" id="qaH-bV-v9U">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="154-W3-aq1">
+                                            <rect key="frame" x="123" y="27" width="74" height="26"/>
+                                            <fontDescription key="fontDescription" type="system" weight="thin" pointSize="28"/>
+                                            <color key="textColor" red="0.94117647059999998" green="0.4431372549" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flower" translatesAutoresizingMaskIntoConstraints="NO" id="Sva-e0-ee6">
+                                            <rect key="frame" x="83" y="24" width="32" height="32"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="32" id="C1t-Vz-Zoc"/>
+                                                <constraint firstAttribute="height" constant="32" id="zcK-ER-Tq0"/>
+                                            </constraints>
+                                        </imageView>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flower" translatesAutoresizingMaskIntoConstraints="NO" id="alm-re-zdk">
+                                            <rect key="frame" x="205" y="24" width="32" height="32"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="32" id="9bt-F8-p7b"/>
+                                                <constraint firstAttribute="width" constant="32" id="v31-75-l8l"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Sva-e0-ee6" firstAttribute="top" secondItem="qaH-bV-v9U" secondAttribute="top" constant="24" id="1Yu-7y-Jr6"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="154-W3-aq1" secondAttribute="bottom" constant="16" id="PjO-dv-SMG"/>
+                                        <constraint firstItem="alm-re-zdk" firstAttribute="top" secondItem="qaH-bV-v9U" secondAttribute="top" constant="24" id="Sr8-bd-5cv"/>
+                                        <constraint firstItem="154-W3-aq1" firstAttribute="top" secondItem="qaH-bV-v9U" secondAttribute="topMargin" constant="16" id="g6P-DB-4Sd"/>
+                                        <constraint firstItem="154-W3-aq1" firstAttribute="centerX" secondItem="qaH-bV-v9U" secondAttribute="centerX" id="u3s-LH-cBz"/>
+                                        <constraint firstItem="alm-re-zdk" firstAttribute="leading" secondItem="154-W3-aq1" secondAttribute="trailing" constant="8" id="vs5-N7-Bxk"/>
+                                        <constraint firstItem="154-W3-aq1" firstAttribute="leading" secondItem="Sva-e0-ee6" secondAttribute="trailing" constant="8" id="wEf-vk-ZqF"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="hourLabel" destination="154-W3-aq1" id="8FG-Eu-pH9"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Fgt-x7-r02" id="Ljp-HW-6b3"/>
+                            <outlet property="delegate" destination="Fgt-x7-r02" id="BRk-d9-G0k"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DGY-tv-snL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1028.985507246377" y="160.04464285714286"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="flower" width="512" height="512"/>
+    </resources>
+</document>
